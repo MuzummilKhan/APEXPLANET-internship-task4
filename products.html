@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white py-4 text-center rounded-b-md shadow-md">
+        <h1 class="text-3xl font-semibold">My Portfolio</h1>
+        <nav class="mt-2">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-blue-200 transition duration-300">About</a></li>
+                <li><a href="projects.html" class="hover:text-blue-200 transition duration-300">Projects</a></li>
+                <li><a href="contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+                <li><a href="products.html" class="hover:text-blue-200 transition duration-300">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section id="products" class="bg-white rounded-md shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-300 pb-2 mb-4">Products</h2>
+            <div class="mb-4">
+                <div class="flex flex-wrap gap-4 items-center">
+                    <div class="flex items-center">
+                        <label for="category-filter" class="mr-2 text-gray-700 font-medium">Category:</label>
+                        <select id="category-filter" class="border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="home">Home Goods</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center">
+                        <label for="price-filter" class="mr-2 text-gray-700 font-medium">Price:</label>
+                        <select id="price-filter" class="border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">All</option>
+                            <option value="0-50">$0 - $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-above">$100+</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center">
+                        <label for="sort-filter" class="mr-2 text-gray-700 font-medium">Sort By:</label>
+                        <select id="sort-filter" class="border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">None</option>
+                            <option value="rating">Rating</option>
+                            <option value="price">Price</option>
+                        </select>
+                    </div>
+                    <button id="clear-filter-button" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Clear Filters
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-list">
+                </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-t-md shadow-md">
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
